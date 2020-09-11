@@ -48,7 +48,10 @@ def get_japanese_emoticon(emoticons, input)
   # code goes here
   emote = load_library(emoticons)
   japanese = nil
+<<<<<<< HEAD
   count = 0
+=======
+>>>>>>> 547878491508947ef48ad95c45c3abf18472d96f
   emote.each do |key, value|
     #binding.pry
     if emote[key][:english] == input
@@ -56,12 +59,27 @@ def get_japanese_emoticon(emoticons, input)
       #binding.pry
       return japanese
     end
+<<<<<<< HEAD
     if !emote[key].has_value?(input)
       count += 1
     end
   end
   if count == emote.length
     p "Sorry, that emoticon was not found"
+=======
+  end
+  count = 0
+  emote.each do |key, value|
+    #binding.pry
+    if !emote[key][:english] == (input)
+      count += 1
+    end
+    #binding.pry
+  end
+  #binding.pry
+  if count == emote.length
+    puts "Sorry, that emoticon was not found"
+>>>>>>> 547878491508947ef48ad95c45c3abf18472d96f
   end
   
   
@@ -84,11 +102,17 @@ def get_japanese_emoticon(emoticons, input)
   #     puts "Sorry, that emoticon was not found"
   #binding.pry
 end
+<<<<<<< HEAD
 
 #binding.pry
 def get_english_meaning(emoticons,input)
   # code goes here
   count = 0
+=======
+binding.pry
+def get_english_meaning(emoticons,input)
+  # code goes here
+>>>>>>> 547878491508947ef48ad95c45c3abf18472d96f
   emote = load_library(emoticons)
   #binding.pry
   emote.each do |key, value|
@@ -97,6 +121,7 @@ def get_english_meaning(emoticons,input)
       return key
       #binding.pry
     end
+<<<<<<< HEAD
     if !emote[key].has_value?(input)
       count += 1
     end
@@ -105,6 +130,9 @@ def get_english_meaning(emoticons,input)
     p "Sorry, that emoticon was not found"
   end
   
+=======
+  end
+>>>>>>> 547878491508947ef48ad95c45c3abf18472d96f
   #english_meaning
 end
 
